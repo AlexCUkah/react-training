@@ -19,9 +19,7 @@ function App() {
 
   return (
     <>
-      <div>
-       <Header name = "alex"/>
-      </div>
+       <Header/>
 
       {
       set.map((fruit, index) => (
