@@ -2,34 +2,23 @@ import { useState, useEffect } from 'react'
 import './styles/App.css'
 import {Header} from './components/header.jsx'
 import axios from "axios" 
-
+import {theme} from './theme/themes.js'
+import { ThemeProvider } from '@mui/material/styles'
+import {CssBaseline} from '@mui/material'
 
 function App() {
-  const [set, setArray] = useState([])
-
-  const fetchAPI = async () => {
-    const response = await axios.get("http://localhost:8000/")
-    setArray(response.data.hello)
-    console.log(response.data.hello)  
-  }
-  
-  useEffect(() => {
-    fetchAPI()
-  },[])
+ 
 
   return (
     <>
+    <ThemeProvider theme={theme}>
+    <CssBaseline />
        <Header/>
-
-      {
-      set.map((fruit, index) => (
-        <div key = {index}>
-          <p>{fruit}</p> 
-        </div>
-      ))
-      }
-      
-       
+      <div sx ={{display: "flex"}}>
+        <p1>Hello</p1>
+      </div>
+    
+      </ThemeProvider>  
     </>
   )
 }

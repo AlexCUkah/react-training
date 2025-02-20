@@ -8,11 +8,6 @@ function Header() {
                 <Box sx={{display:"flex", justifyContent:"Left"}}>
                     <Typography variant="h6">My Logo</Typography>
                 </Box>
-                <Box sx={{ display: "flex", justifyContent: "center", gap: 5 }}>
-                    <Typography>Home</Typography>
-                    <Typography>About</Typography>
-                    <Typography>Contact</Typography>
-                </Box>
                 <AccountMenu/>
             </Toolbar>
         </AppBar>

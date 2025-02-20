@@ -12,10 +12,12 @@ import PersonAdd from '@mui/icons-material/PersonAdd';
 import Settings from '@mui/icons-material/Settings';
 import Logout from '@mui/icons-material/Logout';
 import Button from '@mui/material/Button';
+import '@fontsource/roboto/300.css';
+
 
 export default function AccountMenu() {
   const [anchorEl, setAnchorEl] = React.useState(null);
-  const buttonText = "Log In"
+  const buttonText = "Get started"
   const open = Boolean(anchorEl);
   const handleClick = (event) => {
     setAnchorEl(event.currentTarget);
@@ -25,9 +27,9 @@ export default function AccountMenu() {
   };
   return (
     <React.Fragment>
-      <Box sx={{ display: 'flex', alignItems: 'center', textAlign: 'center', justifyContent: 'right' , marginRight: 5}}>
+      <Box sx={{ display: 'flex', alignItems: 'center', gap: 1, textAlign: 'center', justifyContent: 'right' , marginRight: 5,  width: { xs: '100%', sm: '28%', md: '13%' }}}>
+        <Button className = "sign-in-button" variant="contained" size ='medium' sx={{backgroundColor: "black", width: 1 }}><Typography>{buttonText}</Typography></Button>
         <Tooltip title="Account settings">
-        <Button className = "sign-in-button" variant="contained" size ='medium' sx={{backgroundColor: "black", }}>{buttonText}</Button>
           <IconButton
             onClick={handleClick}
             size="medium"
